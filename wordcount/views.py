@@ -1,5 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('Hello')
+    return render(request, 'home.html')
+
+def eggs(request):
+    return HttpResponse()

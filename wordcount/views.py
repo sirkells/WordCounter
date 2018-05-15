@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+import operator
 
 
 def home(request):
@@ -17,6 +18,8 @@ def count(request):
         else:
             #if word isnt in dict add word and give it a value 1
             wordDictionary[word] = 1
+    sortedWord= sorted(wordDictionary.items(), key= operator.itemgetter(1), reverse= True)
+    #used to sort the words in descending order so we can see the most occured
   
-    return render(request, 'count.html', {'enteredtext': text, 'noOfWords': lengthOfWords, 'wordDict': wordDictionary.items}) 
+    return render(request, 'count.html', {'enteredtext': text, 'noOfWords': lengthOfWords, 'wordDict': sortedWord}) 
     #{'enteredtext':text} is a dictionary that contains the get request text

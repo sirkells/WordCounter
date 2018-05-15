@@ -1,3 +1,4 @@
+<a href="{% url 'home' %}">Restart</a> <!-- returns to homepage --> 
 <h1>Your text has a total of {{ noOfWords }} words.</h1>
 
 <h1>Your Text:</h1>
@@ -5,4 +6,9 @@
 {{ enteredtext }} <!-- the double curly bracket is used to call a dictionary --> 
 
 <h1>Word count of words in your text</h1>
-{{ wordDict }}
+{% for word, wordCount in wordDict %}
+
+{{ word }} | {{ wordCount }} <!-- just putting them side by side so it looks arranged. u can put anything btw like :,;, doesnt matter--> 
+
+<br />
+{% endfor %}

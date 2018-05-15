@@ -3,3 +3,13 @@
 <h1>Your Text:</h1>
 
 {{ enteredtext }} <!-- the double curly bracket is used to call a dictionary --> 
+
+<h1>Word count of words in your text</h1>
+
+{% for word, wordCount in wordDict %}
+
+{{ word }}
+<br />
+{{ wordCount }}
+<br />
+{% endfor %}

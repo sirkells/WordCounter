@@ -5,6 +5,8 @@ import operator
 
 def home(request):
     return render(request, 'home.html')
+def about(request):
+    return render(request, 'about.html')
 
 def count(request):
     text = request.GET['fulltext'] #get request to fetch the inputed text(fulltext) from the form in home.html

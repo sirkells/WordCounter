@@ -18,5 +18,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home)
+    path('', views.home),
+    #path('count/', views.count),
+    path('count/', views.count, name='count'), #whatever thats passed in 'name' needs to be referenced in home.html
 ]

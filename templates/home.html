@@ -1,1 +1,8 @@
-Welcome Home
+<h1>Welcome To Word Count</h1>
+
+<!-- you can also use "<form action="count">". then at the urls.py use path('count/', views.count),  --> 
+<form action= {% url 'count' %}>
+  <textarea cols="40", rows="6", name="fulltext" ></textarea>
+  <br />
+  <input type="submit", value="Count!" />
+</form>

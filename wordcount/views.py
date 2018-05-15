@@ -18,5 +18,5 @@ def count(request):
             #if word isnt in dict add word and give it a value 1
             wordDictionary[word] = 1
   
-    return render(request, 'count.html', {'enteredtext': text, 'noOfWords': lengthOfWords, 'wordDict': wordDictionary.items()}) 
+    return render(request, 'count.html', {'enteredtext': text, 'noOfWords': lengthOfWords, 'wordDict': wordDictionary.items}) 
     #{'enteredtext':text} is a dictionary that contains the get request text
